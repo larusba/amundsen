@@ -63,7 +63,7 @@ class Neo4jExtractor(Extractor):
         # https://neo4j.com/docs/api/python-driver/current/api.html#uri
         _, security_type, _ = parse_neo4j_uri(uri=uri)
         if security_type not in [SECURITY_TYPE_SELF_SIGNED_CERTIFICATE, SECURITY_TYPE_SECURE]:
-            default_security_conf = {'trust': neo4j.TRUST_ALL_CERTIFICATES, 'encrypted': True}
+            default_security_conf = {'trust': neo4j.TRUST_ALL_CERTIFICATES, 'encrypted': False}
             driver_args.update(default_security_conf)
 
         # if NEO4J_VALIDATE_SSL or NEO4J_ENCRYPTED are set in config pass them to the driver
