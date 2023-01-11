@@ -400,6 +400,32 @@ class Neo4jCsvPublisher(Publisher):
         """
         template = Template("""
             MATCH (n1:{{ START_LABEL }} {key: $START_KEY}), (n2:{{ END_LABEL }} {key: $END_KEY})
+            MERGE (n1)-[r1:{{ TYPE }}]->(n2)
+            {% if update_prop_body %}
+            ON CREATE SET {{ prop_body }}
+            ON MATCH SET {{ prop_body }}
+            {% endif %}
+            RETURN n1.key, n2.key
+        """)
+
+        prop_body = self._create_props_body(rel_record, RELATION_REQUIRED_KEYS, 'r1')
+
+        return template.render(START_LABEL=rel_record["START_LABEL"],
+                               END_LABEL=rel_record["END_LABEL"],
+                               TYPE=rel_record["TYPE"],
+                               REVERSE_TYPE=rel_record["REVERSE_TYPE"],
+                               update_prop_body=prop_body,
+                               prop_body=prop_body)
+    
+    # Original
+    def create_relationship_merge_statement_reverse(self, rel_record: dict) -> str:
+        """
+        Creates relationship merge statement
+        :param rel_record:
+        :return:
+        """
+        template = Template("""
+            MATCH (n1:{{ START_LABEL }} {key: $START_KEY}), (n2:{{ END_LABEL }} {key: $END_KEY})
             MERGE (n1)-[r1:{{ TYPE }}]->(n2)-[r2:{{ REVERSE_TYPE }}]->(n1)
             {% if update_prop_body %}
             ON CREATE SET {{ prop_body }}
