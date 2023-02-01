@@ -33,7 +33,7 @@ class DashboardExecution(GraphSerializable, TableSerializable, AtlasSerializable
     DASHBOARD_EXECUTION_LABEL = 'Execution'
     DASHBOARD_EXECUTION_KEY_FORMAT = '{product}_dashboard://{cluster}.{dashboard_group_id}/' \
                                      '{dashboard_id}/execution/{execution_id}'
-    DASHBOARD_EXECUTION_RELATION_TYPE = 'EXECUTED'
+    DASHBOARD_EXECUTION_RELATION_TYPE = 'HAS_EXECUTED'
     EXECUTION_DASHBOARD_RELATION_TYPE = 'EXECUTION_OF'
 
     LAST_EXECUTION_ID = '_last_execution'

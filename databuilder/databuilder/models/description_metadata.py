@@ -23,7 +23,7 @@ class DescriptionMetadata(GraphSerializable, AtlasSerializable):
     DESCRIPTION_TEXT = 'description'
     DESCRIPTION_SOURCE = 'description_source'
 
-    DESCRIPTION_RELATION_TYPE = 'DESCRIPTION'
+    DESCRIPTION_RELATION_TYPE = 'HAS_DESCRIPTION'
     INVERSE_DESCRIPTION_RELATION_TYPE = 'DESCRIPTION_OF'
 
     # The default editable source.

@@ -42,7 +42,7 @@ class User(GraphSerializable, TableSerializable, AtlasSerializable):
     USER_NODE_ROLE_NAME = 'role_name'
 
     USER_MANAGER_RELATION_TYPE = 'MANAGE_BY'
-    MANAGER_USER_RELATION_TYPE = 'MANAGE'
+    MANAGER_USER_RELATION_TYPE = 'MANAGES'
 
     def __init__(self,
                  email: str,

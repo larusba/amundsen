@@ -28,7 +28,7 @@ class TableSource(GraphSerializable, TableSerializable, AtlasSerializable):
     LABEL = 'Source'
     KEY_FORMAT = '{db}://{cluster}.{schema}/{tbl}/_source'
     SOURCE_TABLE_RELATION_TYPE = 'SOURCE_OF'
-    TABLE_SOURCE_RELATION_TYPE = 'SOURCE'
+    TABLE_SOURCE_RELATION_TYPE = 'HAS_SOURCE'
 
     def __init__(self,
                  db_name: str,

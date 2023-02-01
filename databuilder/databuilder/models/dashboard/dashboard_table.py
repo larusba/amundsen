@@ -34,8 +34,8 @@ class DashboardTable(GraphSerializable, TableSerializable, AtlasSerializable):
     between Tables and Dashboard
     """
 
-    DASHBOARD_TABLE_RELATION_TYPE = 'DASHBOARD_WITH_TABLE'
-    TABLE_DASHBOARD_RELATION_TYPE = 'TABLE_OF_DASHBOARD'
+    DASHBOARD_TABLE_RELATION_TYPE = 'HAS_DASHBOARD_WITH_TABLE'
+    TABLE_DASHBOARD_RELATION_TYPE = 'IS_TABLE_OF_DASHBOARD'
 
     def __init__(self,
                  dashboard_group_id: str,

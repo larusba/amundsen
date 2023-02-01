@@ -22,7 +22,7 @@ class FeatureGenerationCode(GraphSerializable):
     LAST_EXECUTED_TIMESTAMP_ATTR = 'last_executed_timestamp'
     SOURCE_ATTR = 'source'
 
-    FEATURE_GENCODE_RELATION_TYPE = 'GENERATION_CODE'
+    FEATURE_GENCODE_RELATION_TYPE = 'HAS_GENERATION_CODE'
     GENCODE_FEATURE_RELATION_TYPE = 'GENERATION_CODE_OF'
 
     def __init__(self,

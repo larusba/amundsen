@@ -43,7 +43,7 @@ class DashboardMetadata(GraphSerializable, TableSerializable, AtlasSerializable)
     Dashboardgroup with relationships to the Dashboard.
     """
     CLUSTER_KEY_FORMAT = '{product}_dashboard://{cluster}'
-    CLUSTER_DASHBOARD_GROUP_RELATION_TYPE = 'DASHBOARD_GROUP'
+    CLUSTER_DASHBOARD_GROUP_RELATION_TYPE = 'HAS_DASHBOARD_GROUP'
     DASHBOARD_GROUP_CLUSTER_RELATION_TYPE = 'DASHBOARD_GROUP_OF'
 
     DASHBOARD_NODE_LABEL = 'Dashboard'
@@ -57,17 +57,17 @@ class DashboardMetadata(GraphSerializable, TableSerializable, AtlasSerializable)
     DASHBOARD_DESCRIPTION = 'description'
     DASHBOARD_DESCRIPTION_FORMAT = \
         '{product}_dashboard://{cluster}.{dashboard_group}/{dashboard_name}/_description'
-    DASHBOARD_DESCRIPTION_RELATION_TYPE = 'DESCRIPTION'
+    DASHBOARD_DESCRIPTION_RELATION_TYPE = 'HAS_DESCRIPTION'
     DESCRIPTION_DASHBOARD_RELATION_TYPE = 'DESCRIPTION_OF'
 
     DASHBOARD_GROUP_NODE_LABEL = 'Dashboardgroup'
     DASHBOARD_GROUP_KEY_FORMAT = '{product}_dashboard://{cluster}.{dashboard_group}'
-    DASHBOARD_GROUP_DASHBOARD_RELATION_TYPE = 'DASHBOARD'
+    DASHBOARD_GROUP_DASHBOARD_RELATION_TYPE = 'HAS_DASHBOARD'
     DASHBOARD_DASHBOARD_GROUP_RELATION_TYPE = 'DASHBOARD_OF'
 
     DASHBOARD_GROUP_DESCRIPTION_KEY_FORMAT = '{product}_dashboard://{cluster}.{dashboard_group}/_description'
 
-    DASHBOARD_TAG_RELATION_TYPE = 'TAG'
+    DASHBOARD_TAG_RELATION_TYPE = 'HAS_TAG'
     TAG_DASHBOARD_RELATION_TYPE = 'TAG_OF'
 
     ATLAS_DASHBOARD_KEY_FORMAT = '{product}_dashboard://{cluster}.{dashboard_group_id}/{dashboard_id}'

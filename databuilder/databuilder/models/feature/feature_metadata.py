@@ -40,7 +40,7 @@ class FeatureMetadata(GraphSerializable):
     FEATURE_GROUP_RELATION_TYPE = 'GROUPED_BY'
 
     FEATURE_DATABASE_RELATION_TYPE = 'FEATURE_AVAILABLE_IN'
-    DATABASE_FEATURE_RELATION_TYPE = 'AVAILABLE_FEATURE'
+    DATABASE_FEATURE_RELATION_TYPE = 'HAS_AVAILABLE_FEATURE'
 
     processed_feature_group_keys: Set[str] = set()
     processed_database_keys: Set[str] = set()

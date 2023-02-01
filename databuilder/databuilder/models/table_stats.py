@@ -15,7 +15,7 @@ from databuilder.models.table_serializable import TableSerializable
 
 LABEL = 'Stat'
 STAT_RESOURCE_RELATION_TYPE = 'STAT_OF'
-RESOURCE_STAT_RELATION_TYPE = 'STAT'
+RESOURCE_STAT_RELATION_TYPE = 'HAS_STAT'
 
 
 class TableStats(GraphSerializable, TableSerializable):

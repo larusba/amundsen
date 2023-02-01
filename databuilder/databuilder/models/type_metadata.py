@@ -19,7 +19,7 @@ LOGGER = logging.getLogger(__name__)
 
 class TypeMetadata(abc.ABC, GraphSerializable):
     NODE_LABEL = 'Type_Metadata'
-    COL_TM_RELATION_TYPE = 'TYPE_METADATA'
+    COL_TM_RELATION_TYPE = 'HAS_TYPE_METADATA'
     TM_COL_RELATION_TYPE = 'TYPE_METADATA_OF'
     SUBTYPE_RELATION_TYPE = 'SUBTYPE'
     INVERSE_SUBTYPE_RELATION_TYPE = 'SUBTYPE_OF'
